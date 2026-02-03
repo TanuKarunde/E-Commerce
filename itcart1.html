@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ITCART | Login & Register</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>    
+
+</head>
+<body>
+
+<!-- Home link -->
+<div class="container-fluid mt-3">
+    <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal">Home</a>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal fade" id="loginModal" tabindex="-1" >
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow p-3" style="width: 67%; border: 1px solid #ffffff; border-radius: 0%;">
+
+            <h2 class="text-center mb-3">Login</h2>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Username:</label>
+                    <input type="text" class="form-control" placeholder="Enter username">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <input type="password" class="form-control">
+                </div>
+
+                <button class="btn btn-primary mb-2">Login</button>
+
+                <div class=" mb-0">
+                    Not a User?
+                    <a href="#" class="text-decoration-none" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">
+                        Register
+                    </a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- REGISTER MODAL -->
+<div class="modal fade" id="registerModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow p-3" style="width: 67%; border: 1px solid #ffffff; border-radius: 0%;">
+
+            <h2 class="text-center mb-3">Registration</h2>
+
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Username:</label>
+                    <input type="text" class="form-control" placeholder="Enter username">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Email Id:</label>
+                    <input type="email" class="form-control" placeholder="Enter a valid email address">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Password:</label>
+                    <input type="password" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Confirm Password:</label>
+                    <input type="password" class="form-control">
+                </div>
+
+                <button class="btn btn-primary mb-2">Register</button>
+
+                <p class=" mb-0">
+                    Already User?
+                    <a href="#" class="text-decoration-none" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#loginModal">
+                        Login
+                    </a>
+                </p>
+            </form>
+
+        </div>
+    </div>
+</div>
+<script>
+    const loginModal = document.getElementById('loginModal');
+    const registerModal = document.getElementById('registerModal');
+
+    loginModal.addEventListener('shown.bs.modal', () => {
+        document.title = "ITCART | Login";
+    });
+
+    registerModal.addEventListener('shown.bs.modal', () => {
+        document.title = "ITCART | Registration";
+    });
+</script>
+
+
+
+</body>
+</html>
